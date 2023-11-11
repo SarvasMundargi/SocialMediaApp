@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity(), PostAdapter.IPostAdapter {
         setContentView(binding.root)
 
         setUpDrawerLayout()
+        binding.fab.setOnClickListener {
+            startActivity(Intent(this,CreatePostActivity::class.java))
+        }
         setUpRecyclerView()
     }
 
